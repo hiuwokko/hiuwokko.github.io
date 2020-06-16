@@ -26,6 +26,8 @@ p{
 } 
 body{
     font-family: 'Tenali Ramakrishna', sans-serif;
+   
+
 
 }
 .blue{
@@ -56,5 +58,15 @@ nav a{
 nav a:hovar{
     text-decoration: underline;
 }
+@media only screen and ( min-width:668px){
+    .carousel-item{
+        max-height: 400px;
+        background-position: center center;
+    }
+}
+.kkkk{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 
 
