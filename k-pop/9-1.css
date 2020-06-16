@@ -1,0 +1,60 @@
+.carousel .carousel-item{
+    height: 500px;
+}
+.purple{
+    background-color:#c38bbf
+}
+.md{
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.musik{
+    
+  
+    padding-left: 1rem;
+    
+}
+.header{
+    
+    text-align: center;
+    
+}
+p{
+    text-shadow:6px 3px 4pxgray gr;
+} 
+body{
+    font-family: 'Tenali Ramakrishna', sans-serif;
+
+}
+.blue{
+    background-color: #87cefa8f;
+}
+.foto-bts{
+    height: 500px;
+}
+.itzy{
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-right: 2rem;
+}
+.foto-1{
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+}
+nav{
+    background-color: #87cefa8f;
+} 
+nav a{
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+nav a:hovar{
+    text-decoration: underline;
+}
+
+
