@@ -1,0 +1,133 @@
+let films = [
+    {   
+        name: 'Сам у дома', 
+        duration: 108, 
+        marks:8.9, 
+        actors:"Іван, Степан, Павло, Катя", 
+        image:"7.jpg",
+        genre:"Триллер",
+        about:"«Один дома» снятый режиссером Крисом Коламбусом в 1990 году. Для многих семей этот фильм стал традицией, которую смотрят дабы дополнить общую атмосферу праздника и незаурядно повеселиться. «Один дома» снятый режиссером Крисом Коламбусом в 1990 году. Для многих семей этот фильм стал традицией, которую смотрят дабы дополнить общую атмосферу праздника и незаурядно повеселиться.  ",
+    },
+    {   
+        name: 'Паддінгтон', 
+        duration: 108, 
+        marks:8.9, 
+        actors:"Іван, Степан, Павло, Катя", 
+        image:"8.jpg",
+        genre:"Пригоди",
+        about:"2",
+    },
+    {   
+        name: 'Зелена книга', 
+        duration: 108, 
+        marks:8.9, 
+        actors:"Іван, Степан, Павло, Катя", 
+        image:"9.jpg",
+        genre:"Комедія, сімейний",
+        about:"3",
+    },
+    {   
+        name: '1+1. Недоторкані', 
+        duration: 108, 
+        marks:8.9, 
+        actors:"Іван, Степан, Павло, Катя", 
+        image:"10.jpg",
+        about:"1",
+    },
+    {   
+        name: '1+1. Недоторкані', 
+        duration: 108, 
+        marks:8.9, 
+        actors:"Іван, Степан, Павло, Катя", 
+        image:"11.jpg",
+        about:"1",
+    },
+    {   
+        name: '1+1. Недоторкані', 
+        duration: 108, 
+        marks:8.9, 
+        actors:"Іван, Степан, Павло, Катя", 
+        image:"12.jpg",
+        about:"1",
+    },
+    {   
+        name: '1+1. Недоторкані', 
+        duration: 108, 
+        marks:8.9, 
+        actors:"Іван, Степан, Павло, Катя", 
+        image:"10.jpg",
+        about:"1",
+    },
+    {   
+        name: '1+1. Недоторкані', 
+        duration: 108, 
+        marks:8.9, 
+        actors:"Іван, Степан, Павло, Катя", 
+        image:"10.jpg",
+        about:"1",
+    },
+    {   
+        name: '1+1. Недоторкані', 
+        duration: 108, 
+        marks:8.9, 
+        actors:"Іван, Степан, Павло, Катя", 
+        image:"10.jpg",
+        about:"1",
+    },
+];
+
+let app = {
+    data() {
+        return {
+            films:films,
+            searchString:'',
+            currentIndex: -1,
+            modalNum:-1,
+            showPr: true,
+        }
+    },
+    methods: {
+        modalShow(index){
+            this.currentIndex = index;
+        }, 
+        modalHide(){
+            this.currentIndex = -1;
+        },
+        showDetail(index) {
+            this.modalNum = index;
+        },
+        hideDetail(){
+            this.modalNum = -1
+        },
+        showPreloader(){
+            setTimeout(()=>{
+                this.showPr = false;
+            }, 1000)
+        },
+        
+    },
+    mounted() {
+        this.showPreloader()
+    },
+    computed: {
+        myFilter(){
+            let search = this.searchString;//скорочуємо змінну
+            if (!search){//якщо змінна пуста
+                return this.films;//показуємо всі фільми
+            }
+            search = search.trim().toLowerCase();//обрізаємо пробіли і малі букви робимо
+
+            return this.films.filter(//запускаємо фільтр
+                item => {//кожен асоціативний масивчик (один фільм)
+                    if (item.name.toLowerCase().indexOf(search) != -1){
+                        return item;//фільми, що підходять
+                    }
+                })
+        }
+    },
+
+    
+
+}
+Vue.createApp(app).mount("#film-app")
+
