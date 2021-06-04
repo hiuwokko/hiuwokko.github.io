@@ -1,5 +1,9 @@
 h1 {
     text-align: center;
+  color: orange;
+  margin-top: 100px;
+font-family: Snell Roundhand, cursive;
+    
 }
 
 .search {
@@ -16,12 +20,12 @@ h1 {
     height: 50px;
     border-radius: 20px;
     outline: 0;
-    border: 2px solid bisque;
+    border: 2px solid rgb(148, 146, 143);
     padding: 20px;
 }
 
 .search>input:focus {
-    box-shadow: 1px 1px 3px rgb(205, 205, 206);
+    box-shadow: 1px 1px 3px rgb(160, 160, 160);
 }
 
 .film-list {
@@ -52,7 +56,7 @@ h1 {
 }
 
 .active-card {
-    box-shadow: 0px 0px 10px orange;
+    box-shadow: 0px 0px 30px orange;
     transform: scale(1.1);
     z-index: 5;
     position: absolute;
@@ -92,14 +96,14 @@ h1 {
     left: 0;
     max-height: 40%;
     overflow: auto;
-    background-color: #fefefe;
+    background-color: #fffdfd;
     width: 100%;
 }
 
 .my-modal-header {
     padding: 2px 16px;
     background-color: orange;
-    color: white;
+    color: rgb(255, 247, 247);
 }
 
 .my-modal-body {
@@ -109,7 +113,7 @@ h1 {
 .my-modal-footer {
     padding: 2px 16px;
     background-color: orange;
-    color: white;
+    color: rgb(194, 190, 190);
 }
 
 @keyframes fadeIn {
@@ -146,7 +150,33 @@ body {
         justify-content: center;
         align-items: center;
         z-index: 1050;
-        background-color: blanchedalmond;
+        background-color: orange;
         height: 100vh;
         width: 100%;
 }
+body{
+    background: black ;
+}
+
+nav   {
+    background-color: orange;
+    color: black;
+} 
+.b1{
+   background: orange;
+   color: black;
+}
+.li{
+    color: black;
+}
+p{
+font-family: Courier New, monospace;
+color: black;
+}
+h5{
+font-family: Snell Roundhand, cursive;
+}
+
+
+ 
+
